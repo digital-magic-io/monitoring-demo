@@ -1,0 +1,11 @@
+version: '3'
+services:
+  monitoring-demo:
+    build: .
+    container_name: monitoring-demo
+    ports:
+      - "8888:80"
+      - "8088:8088"
+      - "7000:7000"
+      - "9042:9042"
+    tty: true

@@ -1,0 +1,21 @@
+body {
+    padding-top: 5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.main {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.error {
+    color: #c9302c;
+    font-weight: bold;
+}
+
+.total {
+    font-weight: bold;
+}

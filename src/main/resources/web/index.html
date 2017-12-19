@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="Monitoring Demo"/>
+        <meta name="author" content="jevgeni@digital-magic.io"/>
+        <base href="/demo/"/>
+        <link rel="icon" href="images/favicon.ico"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <title>Monitoring demo</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Monitoring demo</h1>
+            <p id="error" class="error"></p>
+            <div class="main" id="main">
+                <p class="lead">Do you like our new place:</p>
+                <form action="answer" method="post" id="form">
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" id="email" name="email"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="rate">Rate it (1 to 10):</label>
+                        <input type="number" class="form-control" id="rate" name="rate"/>
+                    </div>
+                    <button type="submit" class="btn btn-default" name="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

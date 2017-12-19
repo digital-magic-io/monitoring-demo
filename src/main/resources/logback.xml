@@ -9,10 +9,10 @@
 	</appender>
 
 	<appender name="logfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/var/log/monitoring-demo/system.${HOSTNAME}.log</file>
+		<file>log/system.${HOSTNAME}.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- daily rollover -->
-			<fileNamePattern>/var/log/monitoring-demo/system.${HOSTNAME}.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+			<fileNamePattern>log/system.${HOSTNAME}.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
 			<!-- keep 30 days' worth of history -->
 			<maxHistory>30</maxHistory>
 		</rollingPolicy>

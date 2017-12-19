@@ -21,6 +21,7 @@ $(document).ready(function() {
                         row += "<td>" + v + "</td>";
                     });
                     tbl += "<tr>" + row + "</tr>";
+                    $("#error").empty();
                 });
                 $("#main").empty().append(tbl).append("<p class=\"total\">Total: " + result.length + "</p>");
                 console.log(result);

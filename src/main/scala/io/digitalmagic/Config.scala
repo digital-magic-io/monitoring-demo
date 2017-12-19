@@ -7,9 +7,10 @@ object Config {
   def load(): Config = {
     val config = ConfigFactory.load()
     val httpConfig = config.getConfig("http")
-    apply(httpConfig.getString("host"), httpConfig.getInt("port"))
+    val influxConfig = config.getConfig("influx")
+    apply(httpConfig.getString("host"), httpConfig.getInt("port"), influxConfig.getString("url"), influxConfig.getString("database"))
   }
 
 }
 
-case class Config(httpHost: String, httpPort: Int)
+case class Config(httpHost: String, httpPort: Int, influxUrl: String, influxDB: String)

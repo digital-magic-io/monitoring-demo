@@ -38,6 +38,17 @@ class HttpServer(config: Config)(implicit system: ActorSystem) extends FailFastC
         get {
           pathEndOrSingleSlash {
             getFromResource("web/index.html")
+          } ~ path("winner") {
+            onComplete(actor ? GetWinner) {
+              case Success(Winner(email)) =>
+                complete(email)
+              case Success(Error(msg)) =>
+                complete(msg)
+              case Failure(f) =>
+                complete(InternalServerError, s"Unable to read answers from DB: ${f.getMessage}")
+              case _ =>
+                complete(InternalServerError, s"Ooops! Something went wrong!")
+            }
           } ~ path("css" / Segment) { filename =>
             getFromResource(s"web/css/$filename")
           } ~ path("images" / "favicon.ico") {

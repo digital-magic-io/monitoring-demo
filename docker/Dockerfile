@@ -38,6 +38,7 @@ RUN rm -rf /etc/nginx/sites-enabled/default
 
 COPY assets/telegraf.conf /etc/telegraf/telegraf.conf
 COPY assets/system.conf /etc/telegraf/telegraf.d/system.conf
+COPY assets/nginx.conf /etc/telegraf/telegraf.d/nginx.conf
 COPY assets/output.conf /etc/telegraf/telegraf.d/output.conf
 COPY assets/monitoring-nginx.conf /etc/nginx/conf.d/monitoring.conf
 
